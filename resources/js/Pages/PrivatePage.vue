@@ -1,26 +1,23 @@
 <template>
-    <Head title="Private" />
 
     <input type="bitton" value="ファイル出力" @click="getfile()">
     <div>
         <h1>私の幸福度</h1>
         <div>
             <BarGraph
-            :Id="private"
             :BarDatas = barDatas
             :LabelDatas = labelDatas
             />
         </div>
     </div>
 
-    <div :class="Private.dataTable">
+    <div class="dataTable">
         <!-- TODO：テーブル作成 -->
     </div>
 
     <h1>私の脳内</h1>
-    <div :class="Private.circleGraph">
+    <div class="circleGraph">
         <CircleGraph
-        :Id = "id"
         :CircleDatas = circleDatas
         :BackgroundColor = backgroundColor
         :LabelDatas = circleLabel
@@ -59,7 +56,7 @@ const getfile = async () => {
 
 </script>
 
-<style>
+<style scoped>
 
     .circleGraph{
         width: 50%!important;

@@ -1,5 +1,5 @@
 <template>
-    <canvas :id="id" width="100" height="38"></canvas>
+    <canvas id="bar" width="100" height="38"></canvas>
 </template>
 
 <script setup>
@@ -8,7 +8,6 @@ import Chart from 'chart.js/auto'
 import { onMounted } from 'vue'
 
 const props = defineProps({
-    Id : String,
     BarDatas : Array,
     LabelDatas : Array,
 })
@@ -18,7 +17,7 @@ onMounted(() => {
 })
 
 const renderChart = () => {
-    let ctx = document.getElementById(props.id).getContext('2d')
+    let ctx = document.getElementById('bar').getContext('2d')
     new Chart(ctx, {
         type : Object,
         data : {
@@ -27,9 +26,9 @@ const renderChart = () => {
                 {
                     type : 'bar',
                     label : '利用者数',
-                    data : props.barDatas,
-                    borderColor : red,
-                    backgroundColor : black
+                    data : props.BarDatas,
+                    borderColor : 'red',
+                    backgroundColor : 'blue'
                 }
             ]
         },

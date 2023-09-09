@@ -1,5 +1,5 @@
 <template>
-    <canvas :id="id"></canvas>
+    <canvas id="circle"></canvas>
 </template>
 
 <script setup>
@@ -19,7 +19,7 @@ onMounted(() => {
 })
 
 const renderChart = () => {
-    let ctx = document.getElementById(props.id).getContext('2d')
+    let ctx = document.getElementById('circle').getContext('2d')
     new Chart(ctx, {
         type : 'doughnut',
         data : {
@@ -28,7 +28,7 @@ const renderChart = () => {
                 {
                     type : 'doughnut',
                     label : '趣味',
-                    data : props.circleDatas,
+                    data : props.CircleDatas,
                     fill : false,
                     backgroundColor : props.backgroundColor,
                 }
