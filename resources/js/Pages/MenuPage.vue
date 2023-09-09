@@ -1,10 +1,8 @@
 <template>
-    <Head title="Menu" />
-
     <h1>メニュー</h1>
 
-    <div :class="Menu.container">
-        <button :class="Menu.btn"><router-link to="/">社会人</router-link></button>
+    <div class="container">
+        <button class="btn"><router-link to="/">社会人</router-link></button>
     </div>
 
 </template>
@@ -14,6 +12,6 @@
 </script>
 
 
-<style module="Menu">
+<style scoped>
 
 </style>
