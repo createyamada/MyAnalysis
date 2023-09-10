@@ -24,6 +24,14 @@
         />
 
     </div>
+    <h1>テスト積み上げ</h1>
+    <div class="circleGraph">
+        <PileUpGraph
+        :PileDatas = pileDatas
+        :GuidDatas = pileLabelDatas
+        />
+
+    </div>
 </template>
 
 
@@ -32,6 +40,7 @@
 import { ref } from 'vue'
 import BarGraph from '../Component/Graph/BarGraph.vue'
 import CircleGraph from '../Component/Graph/CircleGraph.vue'
+import PileUpGraph from '../Component/Graph/PileUpGraph.vue';
 
 
 // TODO:グラフに渡すモックデータ
@@ -47,6 +56,10 @@ const backgroundColor = ref(['red','yellow','green','blue','white','black'])
 const circleLabel = ref(['宇宙','ランニング','筋トレ','プログラミング','ゲーム','読書'])
 // TODO: 円グラフ
 
+// TODO:積み上げ棒グラフ
+const pileDatas = ref([52,56,12,78,5,98,45],[52,56,12,78,5,98,45],[52,56,12,78,5,98,45],[52,56,12,78,5,98,45],[52,56,12,78,5,98,45])
+const pileLabelDatas = ref(['1歳','2歳','3歳','4歳'])
+// TODO:積み上げ棒グラフ
 
 // TODO:グラフに渡すモックデータ
 
