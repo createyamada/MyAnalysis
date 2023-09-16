@@ -8,22 +8,22 @@ import Chart from 'chart.js/auto'
 import { onMounted } from 'vue'
 
 const props = defineProps({
-    GraphDatas : Array,
-    LabelDatas : Array,
+    PileDatas : Array,
     GuidDatas : Array,
+    // GuidDatas : Array,
 })
 
 const graphData = []
-const backgroundColor = ["red" , "yellow" , "blue" , "green"]
+const backgroundColor = ["red" , "yellow" , "blue" , "green" , "black"]
 
 onMounted (() => {
     // 受け取った配列を指定フォーマットに整形
-    for(let i=0;i<props.GraphDatas.length;i++) {
+    for(let i=0;i<props.PileDatas.length;i++) {
         graphData.push({
             type : 'bar',
             label : props.GuidDatas[i],
             fill : false,
-            data : props.GraphDatas[i],
+            data : props.PileDatas[i],
             backgroundColor : backgroundColor[i],
             lineTension : 0.1,
         })
@@ -33,7 +33,7 @@ onMounted (() => {
 })
 
 const renderChart = () => {
-    let ctx = document.getElementById(props.id).getContext('2d')
+    let ctx = document.getElementById('pileup').getContext('2d')
     new Chart(ctx, {
         type : 'bar',
         data : {

@@ -30,7 +30,6 @@
         :PileDatas = pileDatas
         :GuidDatas = pileLabelDatas
         />
-
     </div>
 </template>
 
@@ -58,7 +57,7 @@ const circleLabel = ref(['宇宙','ランニング','筋トレ','プログラミ
 
 // TODO:積み上げ棒グラフ
 const pileDatas = ref([52,56,12,78,5,98,45],[52,56,12,78,5,98,45],[52,56,12,78,5,98,45],[52,56,12,78,5,98,45],[52,56,12,78,5,98,45])
-const pileLabelDatas = ref(['1歳','2歳','3歳','4歳'])
+const pileLabelDatas = ref(['1歳','2歳','3歳','4歳','5歳'])
 // TODO:積み上げ棒グラフ
 
 // TODO:グラフに渡すモックデータ
